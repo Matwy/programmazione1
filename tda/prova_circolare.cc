@@ -10,9 +10,10 @@ int main(int argc, char** argv)
     circolare_insert_end('b');
     circolare_insert_end('c');
     circolare_insert_end('d');
+    
+    int m = 4;
+    remove_ogni_m(m);
     circolare_print();
-    char c = circolare_get(16);
-    cout << c << endl;
 
 
     return 0;
