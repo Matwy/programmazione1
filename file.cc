@@ -9,7 +9,8 @@ int main(int argc, char **argv){
     }
 
     std::fstream fs_in(argv[1], std::fstream::in);
-
+    // fs_in >> std::noskipws;
+    
     if(fs_in.fail())
     {
         std::cout << "file in lettura non esiste" << std::endl;
@@ -20,7 +21,9 @@ int main(int argc, char **argv){
     std::fstream fs_out(argv[2], std::fstream::out); 
     // std::fstream fs_out(argv[2], std::fstream::out | std::fstream::app); // per aggiungere alla fine del file 
     char buffer[24];
-    while(!fs_in.eof() && !fs_in.fail())
+    // char buffer;
+    // while(fs_in.get(buffer)) 
+    while(fs_in >> buffer)
     {
         fs_in >> buffer;
         fs_out << buffer;

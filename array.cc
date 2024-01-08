@@ -33,9 +33,8 @@ void print_matrix(int** matrix, int row, int col){
     }
 }
 void print_array(int* arr, int dim){
-    for(int i = 0; i < dim; i++){
+    for(int i = 0; i < dim; i++)
         std::cout << arr[i] << ", ";
-    }
     std::cout << std::endl;
 }
 
